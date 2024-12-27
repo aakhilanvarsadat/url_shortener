@@ -1,0 +1,20 @@
+# import string
+# def encode(num):
+#     base62_chars = string.ascii_letters + string.digits
+#     """Encode a number into Base62."""
+#     base62 = []
+#     base = len(base62_chars)
+#     while num > 0:
+#         base62.append(base62_chars[num % base])
+#         num //= base
+#     return ''.join(reversed(base62))
+# counter =11000
+# url ="www.ashna.com/jamal/anchal/kurishinmukku"
+# short_code = encode(counter)
+# print(short_code)
+
+import hashlib
+def sha256_hash(url):
+    print(hashlib.sha256(url.encode()).hexdigest()[:8])
+url ="www.ashna.com/jamal/anchal/kurishinmukku"
+sha256_hash(url)
